@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image x/icon" href="imagenes/rocket.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img src="imagenes/logo.svg" alt="Logo Alura" class="logo">
+    </header>
+    
+    <main>  <!--contendeor para toda la pagina-->
+        <section class="encriptador"> <!--seccion izquierda conde encriptares texto y tendremos botones-->
+                <textarea name="IngreseTexto" placeholder="Ingrese el texto aqui" class="textarea-encriptar" cols="30" rows="10"></textarea>
+
+                <div class="encriptador-avisos"> <!--reglas para ingresar texto-->
+                    <img src="imagenes/aviso.svg" alt="aviso" class="img-aviso">
+                    <p class="texto-aviso">Solo letras minúsculas y sin acentos.</p>
+                </div>
+
+                <div class="botones"> <!--botones para encriptar y desencriptar-->
+                    <button type="submit" class="btn-encriptar">Encriptar</button>
+                    <button type="submit" class="btn-desencriptar">Desencriptar</button>
+                </div>
+        </section>
+
+        <section class="tarjeta"> <!--seccion derecha que contendra imagen de muñeco avisos y boton para copiar-->
+<div class="tarjeta-contenedor"> <!--contendra todo lo enlistado en la seccion derecha-->
+    <img src="imagenes/Muñeco.png" alt="muñeco no encontado" class="img-muñeco">
+            <p class="texto-1">Ningún mensaje fue encontrado</p>
+            <p class="texto-2">Ingrese el texto que desea encriptar o desencriptar</p>
+</div>
+
+<textarea type="mensaje" class="evaluar" readonly></textarea><!--readonly en este textarea por que queremos que solo se vea el texto, no ingresar ni modificar nada-->
+<button type="submit" class="btn-copiar">Copiar</button>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+<footer class="piedepagina">
+    <p class="copyright"> Francisco Saúl Flores Coronado</p>
+    <a href="https://www.linkedin.com/in/saul-flores-95875127b">
+        <img src="imagenes/linkedin.png" alt="linkedin" class="linkedin">
+    </a>
+
+    <a href="https://github.com/Reisk0">
+        <img src="imagenes/github.png" alt="github" class="github">
+    </a>
+</footer>
+</html>

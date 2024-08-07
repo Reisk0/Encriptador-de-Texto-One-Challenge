@@ -1,0 +1,412 @@
+
+
+:root { /*fuentes para las variables de todo el CSS*/
+    --Font:#F3F5FC;
+    --white:#FFFFFF;
+    --Dark-Blue: #0A3871;
+    --Gray:  #495057;
+    --RGBA: rgba(0,0,0,0.08);
+    --White-Blue: "D8DFE8";
+    --Medium-Blue: #0A38718A;
+    --Gray2: #343440; 
+    --Gree: #495057;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*con esta propiedad se calculoa correctamente el tamaÃ±o de una secicon tomando en cuenta el content, border y padding sumandolos en vez de aÃ±adirlos */
+    background-color:  var(--white);
+    font-style: "inter";
+    text-decoration: none;
+}
+
+::selection{ /*esto controla el comportamiento de lo que seleccionamos*/
+    background: var(--Dark-Blue); /*color de fondo*/
+    color: var(--white);/*color de las letras al seleccionarlas*/
+}
+.body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+header {
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.encriptador {
+    width: 60%;
+    margin: 168px 0px 0px 140px; /*checar muy bien estos margenes !!!!!!*/
+}
+
+.textarea-encriptar{
+width: 660px;
+height: 288px;
+font-weight: 400;/*grosor de la letra*/
+font-size: 32px;/*tamaÃ±o de la letra*/
+line-height: 150%;/*espaciado entre parrafos*/
+outline: none;
+border: none;
+resize: none; /*esta propieda en none evita que el usaurio pueda cambiar las dimensiones del elemento, en este caso que el text area se quede del mismo tamaÃ±o*/
+}
+
+.textarea-encriptar::placeholder, :focus {/*controla lo que pasa en el elemnto cuando interactuas con el, en este caso esta fucionado con el placeholder*/
+    color: var(--Dark-Blue); /*cuando se le da click en el placeholder el texto cambiara a la var dark blue*/
+}
+
+.encriptador-avisos {/*aqui tenemos el incono de cuidado y el P*/
+    display: flex;
+    flex-direction: row;/*row para que los elementos vayan en fila*/
+    align-items: center;
+    padding: 0;
+    gap: 8px; /*abra un espaciado de 8px entre cada elemento*/
+    /* margin: 10px/*margin top/* 10px margin-right 10px/*margin bottom  10px/*margin-left*/
+    position: static;
+    top: 100%;/*esto empujara los avisos hacia abajo en el portcentaje desesado*/
+    margin-bottom: 1%;
+    width: 35%;
+}
+
+.texto-aviso {
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 90%; /*acomodara en linea nuestro texto, si aumentamos el porcentaje el elemento ira bajando por que se empuja hacia abajo*/
+    opacity: 0.8;/*nos da un nivel de trasparencia entre el 0=totalmente transparente y 1=totalmente visible*/
+    color: var(--Gray);
+}
+
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;/*division entre cada boton*/
+    position: static;
+    top: 115%;/*distancia que tienen los botones desde la parte superior, se empujan hacia abajo*/
+
+}
+
+.btn-encriptar {
+    background-color: var(--Dark-Blue);
+    border-radius: 24px;
+    color: var(--white);
+    width: 328px;
+    height: 67px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;/*cuando usamos justify todas las lineas miden los mismo*/
+    border: 1px solid var(--Dark-Blue);
+    box-shadow: 0px, 20px, 29px, -5px var(--RGBA);
+    cursor: pointer;
+}
+
+.btn-encriptar:active {/*cuando le damos click al boton se ejecutaran estas caracteristicas*/
+    box-shadow: inset 2px 2px 4px var(--Font); /*inicio de un evento*/
+    inset: -3px -4px 8 px var(--Dark-Blue);
+    color: var(--White-Blue);
+}
+
+.btn-desencriptar {
+    background-color: var(--Font);
+    border-radius: 24px;
+    color: var(--Dark-Blue);
+    width: 328px;
+    height: 67px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    border: 1px solid var(--Dark-Blue);
+    box-shadow: 0px, 20px, 29px, -5px var(--RGBA);
+    cursor: pointer;
+    background: var(--White-Blue);
+}
+
+.btn-desencriptar:active {
+    box-shadow: inset 2px 2px 4px var(--Dark-Blue); /*inicio de un evento*/
+    inset: -3px -4px 8px var(--Font);
+    color: var(--Medium-Blue);
+}
+
+.tarjeta {
+    width: 270px;
+    height: 580px;
+    background: var(--Font);
+    box-shadow:  8px 1px 18px 2px var(--Gray);
+    position: relative;/*se mueve en base a su posiicon original, desde donde se declaro hasta donde lo posiconemos con top right left hy bottom*/
+    border-radius: 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta-contenedor {/*contendor de la imagen y textos*/
+    width: 250px;
+    margin: auto;/*centrar los elementos orizontalmente,los elementos se distribuyen equitantivamente dentro del elemento*/
+    margin-top: 50%;
+    background: var(--Font);
+    align-items: center;
+}
+
+.img-muÃ±eco {
+    background: var(--Font);
+}
+
+.texto-1 {
+    font-style:normal;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+    color: var(--Gray2);
+    background: var(--Font);
+}
+
+.texto-2 {
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    color: var(--Gray2);
+    background: var(--Font);
+}
+
+.evaluar {/*text area del texto una vez que se encritpa*/
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--Gree);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.evaluar:focus {
+    outline: none;
+}
+
+.btn-copiar {
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--White-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 24px;
+    color: var(--Dark-Blue);
+    cursor: pointer;
+    margin-top: 180%;
+}
+
+.btn-copiar:active {
+    box-shadow: inset 2px 2px 4px var(--Dark-Blue); /*inicio de un evento*/
+    inset: -3px -4px 8px var(--Font);
+    color: var(--Medium-Blue);
+}
+
+.btn-encriptar:hover, 
+.btn-desencriptar:hover, 
+.btn-copiar:hover {
+transform: scale(0.97); /*reducir en escala al pasar el cursor sobre los botones*/
+}
+
+footer {
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 15px solid var(--Font);
+    color: var(--Gray);
+    text-align: center;
+    height: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Gray);    
+}
+
+.copyright {
+    color: var(--Dark-Blue);
+    opacity: 0.8;
+    padding: 1%;
+}
+.github {
+    height: 43px;
+    width: 43px;
+
+}
+
+.linkedin {
+    height: 43px;
+    width: 43px;
+}
+
+@media(max-width: 1250px) {
+main {
+    display: flex;
+    flex-direction: column; /*indicamos que todo dentro el main ira en columna hacia abajo*/
+    align-items: center;
+    width: 100%; /*todo lo que este dentro del main ocupara un ancho de la pantalla de un 100%*/
+}
+
+.encriptador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*  NOTA DE MARGINespacios hacia afuera recuerda los margenes son espacion mas haya de lo establecido en tu figura*/
+    margin: 168px/*margen superior*/ 0px/*margen derecho e izquierdo*/ 0px;/*margen inferior*/ /*Tres valores: El primer valor se aplica al margen superior, el segundo a los mÃ¡rgenes derecho e izquierdo, y el tercer valor al margen inferior.*/
+    width: 100%;
+}
+
+
+.encriptador-avisos{
+    position: inherit;
+    margin: 15px;
+    width: 30%;
+    }
+
+.botones {
+    display: flex;
+    align-items: center;
+    position: inherit; /*hereda el comportamiento de si elemento padre, en este caso static*/
+}
+
+.tarjeta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+    width: 665px;
+    height: 300px;
+}
+
+.tarjeta-contenedor{
+    display: block; /*ocupa el 100% del ancho por eso se colocan uno bajo el otro*/
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 20%;
+    font-size: 24px;
+    font-weight: 700;
+    height: 45%;
+
+}
+
+.img-muñeco{
+    display: none;
+}
+
+.btn-copiar {
+    position: inherit;
+    width: 50%;
+    margin-top: 24%;
+
+}
+
+.evaluar {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+}
+
+.tarjeta {
+    margin-top: 25px;
+    width: 65%;
+    height: 250px;
+    align-items: center;
+}
+
+.texto-1 {
+    margin-top: -10%;
+}
+
+
+}
+
+@media(max-width: 768px) {
+
+header.logo {
+ width: 100%;
+ background: var(--white);
+ padding: 2px;
+}
+
+    .textarea-encriptar{
+        height: 50%;
+        width: 90%;
+        font-size: 24px;
+    }
+        
+    .botones {
+        display: grid; 
+        gap: 21px;
+    }
+
+    .tarjeta {
+        margin-top: 45px;
+        width: 90%;
+        height: 250px;
+    }
+
+.tarjeta-contenedor {
+        height: 10%;
+        border-radius: 25px;
+        align-items: center;
+        padding: 10px;
+}
+
+
+.texto-1 {
+    margin-top: -20%;
+}
+
+.btn-copiar {
+    margin-top: 30%;
+}
+
+.encriptador-avisos {/*aqui tenemos el incono de cuidado y el P*/
+    width: 40%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+}
