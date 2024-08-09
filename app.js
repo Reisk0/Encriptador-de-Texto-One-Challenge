@@ -140,9 +140,3 @@ btnCopiar.addEventListener("click", e=>{//el boton se activara solo al hacer cli
     copiar.select();//nos permitira elegir todo el texto de nuestra textarea evaluar
     document.execCommand("copy");//esta funcion es la que se encarga de copiar nuestro texto seleccionado en nuestra funcion de copiar
 });
-
-function validarTexto(texto) { 
-    const regex = /^[a-zñ\s]+$/; 
-    return regex.test(texto)};
-
-    console.log(validarTexto);

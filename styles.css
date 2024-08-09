@@ -1,6 +1,6 @@
 
 
-:root { /*fuentes para las variables de todo el CSS*/
+:root { /*fuentes para las variables que apareceran en todo el CSS */
     --Font:#F3F5FC;
     --white:#FFFFFF;
     --Dark-Blue: #0A3871;
@@ -300,7 +300,7 @@ main {
     margin: 15px;
     width: 30%;
     }
-
+/*botones*/
 .botones {
     display: flex;
     align-items: center;
