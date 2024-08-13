@@ -16,7 +16,7 @@ btnEncriptar.addEventListener("click", e=>{//el boton se activara solo al hacer 
             if(texto == ""){ //"" representa una cadena vacía, es decir, una cadena que no contiene ningún carácter, a diferencia de un espacio en blanco que seira un " ".
                 aviso.style.background = "#0A3871";//la propiedad style cambiara el css si se cumple esta condicional
                 aviso.style.color = "#FFFF";
-                aviso.style.fontWeight = "600";
+                aviso.style.fontWeight = "600"; 
                 aviso.style.borderRadius = "5px";  
                 aviso.textContent = "Ingrese contenido al campo de texto, por favor.";
 
